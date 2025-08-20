@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Jacques+Francois);
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+body {
+  background-color: #979797;
+  color: #fff;
+  margin: 0;
+  padding: 0;}
+
+/********** LOGO **********/
+h1 {
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  margin: 40px auto 40px auto;
+  background-image: url('../img/logo-2.png');
+  background-repeat: no-repeat;
+  /*Ẩn chữ nhưng vẫn giữ thẻ*/
+  text-indent: 100%; /*đẩy chữ sang phải 100% chiều rộng khối.*/
+  white-space: nowrap; /*ngăn chữ xuống dòng.*/
+  overflow: hidden; /*phần chữ bị tràn ra ngoài sẽ bị ẩn đi.*/
+}
+
+/********** TYPOGRAPHY **********/
+body{
+    font-family: 'Jacques Francois', serif;}
+
+/********** SLIDER **********/
+
+.slider { /* Khung ngoài, căn lề cho slider */
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.slide-viewer { /* Khung nhìn cố định, ẩn phần dư */
+  position: relative; /* cần thiết cho IE7 */
+  overflow: hidden; /* Nội dung tràn ra ngoài khung (chỉ hiển thị vùng 438px) */
+  height: 438px;
+}
+
+.slide-group { /* Chứa các slide */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide { /* Mỗi slide chiếm toàn bộ khung, nhưng mặc định bị ẩn */
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute; /* Chồng các slide lên nhau */
+}
+
+.slide:first-child { /* Hiển thị slide đầu tiên khi trang tải */
+  display: block;
+}
+
+/********** BUTTONS **********/
+
+.slide-buttons {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.slide-btn {
+  border: none;
+  background: none;
+  color: #000;
+  font-size: 200%;
+  line-height: 0.5em;
+  cursor: pointer;
+}
+
+.slide-btn.active {
+  color: #979797; /* Màu khi được chọn */
+}
